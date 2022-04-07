@@ -1,0 +1,80 @@
+.newsletter-container {
+    background-color: $soft-blue;
+    padding: to-rem(20px) to-rem(20px);
+    display: block;
+
+    @include media('>desktop') { 
+        text-align: center;
+    }
+
+    .content-container {
+        @include media('>desktop') { 
+            width: to-rem(460px);
+            margin: auto;
+        }
+    }
+
+    .heading--newsletter {
+        font-size: to-rem(16px);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-top: to-rem(30px);
+    }
+
+    .sub-heading--newsletter {
+        padding-bottom: to-rem(30px);
+        font-size: to-rem(22px);
+
+        @include media('>desktop') { 
+            font-size: to-rem(30px);
+        }
+    }
+
+    .input {
+        font-size: 16px;
+        width: 100%;
+        display: block;
+        padding: to-rem(16px);
+        border-radius: to-rem(4px);
+        border: none;
+        color: $g-blue;
+        margin-bottom: to-rem(20px);
+
+        @include media('>desktop') { 
+            display: initial;
+            width: initial;
+
+            width: to-rem(300px);
+            margin-right: to-rem(20px);
+            margin-bottom: to-rem(40px);
+        }
+    }
+
+    .btn--cta {
+        display: block;
+        font-size: 16px;
+        width: 100%;
+        color: $white;
+        background-color: $soft-red;
+        box-shadow: none;
+        padding: to-rem(11px);
+        
+        @include media('>desktop') { 
+            display: initial;
+            margin-right: initial;
+        }
+        
+        &:hover {
+            @include media('>desktop') { 
+                cursor: pointer;
+                background-color: $white;
+                color: $soft-red;
+                border-color: $soft-red;
+            }
+        }
+    }
+}
+
+.newsletter-container.container {
+    padding: to-rem(20px);
+}

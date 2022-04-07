@@ -1,0 +1,69 @@
+.hero-container {
+    position: relative;
+    padding: 0 to-rem(20px);
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include media('>desktop') { 
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-content {
+        padding-top: to-rem(40px);
+        text-align: center;
+        width: 100%;
+      
+        @include media('>desktop') { 
+            width: 50%;
+            text-align: left;
+        }
+    }
+      
+    .image-container {
+        @include media('>desktop') { 
+            width: 50%;
+        }
+    }
+
+    img {
+        z-index: 2;
+    }
+}
+
+.hero-image-bg {
+    z-index: 1;
+    background-color: $soft-blue;
+    position: absolute;
+    top: to-rem(60px);
+    right: 0;
+    width: to-rem(160px);
+    height: to-rem(160px);
+
+    @include media('>desktop') { 
+        top: to-rem(200px);
+        left: initial;
+        right: 0;
+        height: to-rem(300px);
+        width: to-rem(400px);
+    }
+
+    &::before {
+            content: '';
+            position: absolute;
+            background: $soft-blue;
+            width: to-rem(160px);
+            height: to-rem(160px);
+            right: to-rem(70px);
+            border-radius: 50% 50%;
+
+            @include media('>desktop') { 
+                top: to-rem(0);
+                left: initial;
+                right: to-rem(240px);
+                height: to-rem(300px);
+                width: to-rem(300px);
+            }
+        }
+}

@@ -1,0 +1,55 @@
+.feature-container {
+    position: relative;
+    
+    .text-content {
+        @include media('>desktop') { 
+            width: to-rem(470px);
+        }
+    }
+    
+    .paragraph-01 {
+        @include media('>desktop') {
+            padding-bottom: to-rem(40px);
+        }
+    }
+
+    .feature-nav {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: to-rem(60px);
+
+        @include media('>desktop') {
+            flex-direction: row;
+            margin: auto;
+            width: to-rem(564px);
+            border-bottom: 1px solid grey;
+
+        }
+    }
+
+    .nav-item {
+        font-size: to-rem(18px);
+        border-bottom: 1px solid grey;
+        padding: to-rem(10px) to-rem(40px);
+
+        @include media('>desktop') {
+            font-size: to-rem(16px);
+            border-bottom: 1px solid transparent;
+            display: inline-block;
+            padding: 0 to-rem(30px);
+            padding-bottom: to-rem(20px);
+        }
+
+        &:hover {
+            @include media('>desktop') {
+                transition: 0.2s ease-in-out color;
+                color: $soft-red;
+            }
+        }
+    }
+
+    .nav-item.js-is-active {
+        color: $soft-red;
+        border-bottom: 3px solid $soft-red;
+    }
+}

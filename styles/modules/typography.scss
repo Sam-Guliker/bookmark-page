@@ -1,0 +1,179 @@
+@import './variables.scss';
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $primary-font;
+}
+
+p, input, span, a, details {
+    font-family: $primary-font;
+    color: $g-blue;
+    text-decoration: none;
+}
+
+.heading-01 { 
+    font-family: $heading-font;
+    font-size: to-rem(23px);
+    font-weight: 500;
+    line-height: 1.3;
+    padding-bottom: to-rem(10px);
+
+    color: $black;
+    
+    @include media('>desktop') { 
+        font-size: to-rem(30px)
+    }
+}
+
+.navigation-01 {
+    font-family: $heading-font;
+    font-size: to-rem(16px);
+    font-weight: light;
+    text-transform: uppercase;
+    padding: 1rem;
+    color: $white;
+    letter-spacing: 2px;
+}
+
+.heading-02 {
+    font-size: to-rem(24px);
+    padding-bottom: to-rem(12px);
+    font-weight: 400;
+}
+
+.heading-03 {
+    font-size: to-rem(18px);
+    font-weight: 500;
+}
+
+.paragraph-01 {
+    padding: 0 to-rem(10px);
+    padding-bottom: to-rem(20px);
+
+    @include media('>desktop') {
+        padding: 0;
+        padding-bottom: to-rem(20px);
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include media('>tablet') {
+        display: block;
+        flex-direction: initial;
+        justify-content: initial;
+    }
+}
+
+.btn {
+    padding: to-rem(13px) to-rem(20px);
+    background: $offWhite;
+    outline: none;
+    border: 2px solid transparent;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 1.25rem;
+    font-size: 0.7rem;
+    border-radius: 6px;
+    box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.2);
+
+    transition: 0.2s ease-in-out all;
+
+    &:hover {
+        @include media('>desktop') { 
+            color: $black;
+            border-color: $black;
+        }
+    }
+
+    @include media('>tablet') { 
+
+        &:first-of-type {
+            margin-right: to-rem(10px);
+        }
+    }
+}
+
+.btn--call-to-action {
+    background-color: $soft-blue;
+    color: $white;
+
+    transition: 0.2s ease-in-out all;
+
+    &:hover {
+        @include media('>desktop') { 
+            color: $soft-blue;
+            border-color: $soft-blue;
+            background-color: $white;
+        }
+    }
+}
+
+.btn--more-info {
+    display: inline-block;
+    background-color: $soft-blue;
+    color: $white;
+    margin: to-rem(20px) auto;
+}
+
+.mobile-navigation .btn--call-to-action-mobile {
+    margin-top: to-rem(20px);
+    
+    border: 2px solid $white;
+    border-radius: 6px 6px;
+    padding: to-rem(12px);
+}
+
+.link {
+    font-size: to-rem(12px);
+    text-transform: uppercase;
+    padding-right: to-rem(40px);
+    letter-spacing: 1px;
+    color: $d-blue;
+
+    transition: ease-in-out 0.2s all;
+
+    &--special {
+        background-color: $soft-red;
+        color: $white;
+        font-weight: bold;
+
+        padding: to-rem(11px) to-rem(26px);
+        border-radius: 6px;
+        border: 2px solid transparent;
+
+        &:hover {
+            @include media('>desktop') { 
+                cursor: pointer;
+                background-color: $white;
+                color: $soft-red;
+                border-color: $soft-red;
+            }
+        }
+    }
+
+
+    &:hover {
+        @include media('>desktop') { 
+            color: $soft-red;
+        }
+    }
+}
+
+.footer-link {
+    display: block;
+    font-size: to-rem(14px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: to-rem(20px);
+    color: $white;
+
+    transition: ease-in-out 0.2s color;
+
+    &:hover {
+        @include media('>desktop') { 
+            color: $soft-red;
+        }
+    }
+}

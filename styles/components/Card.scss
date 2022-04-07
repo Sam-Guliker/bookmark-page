@@ -1,0 +1,78 @@
+.card-container {
+    padding: 0 to-rem(30px);
+    margin: auto;
+
+    @include media('>desktop') { 
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: to-rem(900px);
+    }
+}
+
+.card-item {
+    position: relative;
+    box-shadow: 0px 8px 10px 5px rgba(0,0,0,0.09);
+    border-radius: 10px;
+    padding: to-rem(40px) to-rem(20px);
+    max-width: to-rem(300px);
+    margin: auto;
+    padding-bottom: to-rem(20px);
+    text-align: center;
+    margin-bottom: to-rem(30px);
+
+    &:nth-of-type(2n) {
+        @include media('>desktop') { 
+            margin-top: to-rem(30px);
+            margin-bottom: to-rem(-30px);
+        }
+    }
+
+    &:nth-of-type(3n) {
+        @include media('>desktop') { 
+            margin-top: to-rem(60px);
+            margin-bottom: to-rem(-60px);
+
+        }
+    }
+
+    @include media('>tablet') { 
+        width: to-rem(300px);
+    }
+    
+    @include media('>desktop') { 
+        width: to-rem(260px);
+        padding-bottom: to-rem(20px);
+    }
+
+    .heading-01 {
+        font-size: to-rem(22px);
+    }
+
+    img {
+        padding-bottom: to-rem(20px);
+    }
+
+    .btn--card {
+        display: block;
+        width: 100%;
+        background-color: $soft-blue;
+        color: $white;
+        margin-bottom: 0;
+        transition: 0.2s ease-in-out color;
+
+        &:focus {
+            outline: 2px solid coral
+        }
+
+        &:hover {
+            @include media('>desktop') {
+                border-color: $soft-blue;
+                color: $soft-blue;
+                outline-color: $soft-blue;
+                background-color: $white;
+            }
+        }
+    }
+}

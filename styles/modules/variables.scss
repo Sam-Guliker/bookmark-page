@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+// Colors
+// Primary
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+
+// Neutral
+$g-blue: hsl(229, 8%, 60%);
+$d-blue:  hsl(229, 31%, 21%);
+
+$offWhite: #F7F7F7;
+$white: hsl(0, 100%, 100%);
+$black: hsl(0, 0%, 0%);
+
+$background-color: $white;
+$primary-color: $white;
+$base-font-size: 18px;
+
+// Typography
+$primary-font:  'Rubik', sans-serif;
+$heading-font:  'Rubik', sans-serif;
+
+// font weight:
+$base-light-font-weight: 100;
+$base-lighter-font-weight: 300;
+$base-font-weight: 400;
+$base-semibold-font-weight:500;
+$base-bold-font-weight: 700;

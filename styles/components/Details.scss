@@ -1,0 +1,42 @@
+.details-container {
+    position: relative;
+
+    @include media('>desktop') {
+        max-width: to-rem(900px);
+        margin: auto;
+        padding-bottom: to-rem(400px);
+    }
+
+    .image-wrapper {
+        
+        padding-bottom: to-rem(90px);
+
+        @include media('>desktop') {
+            position: relative;
+            margin-right: to-rem(100px);
+            width: to-rem(440px);
+        }
+    }
+
+    .content-wrapper {        
+        @include media('>desktop') {
+            position: absolute;
+            top: to-rem(100px);
+            left: 0;
+            margin-bottom: 0;
+        }
+        @include media('>desktop') {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .text-content,
+        .heading-01,
+        .paragraph-01 {
+            @include media('>desktop') {
+                text-align: left;
+                padding-left: 0;
+            }
+        }
+    }
+}

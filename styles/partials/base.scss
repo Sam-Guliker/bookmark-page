@@ -1,0 +1,126 @@
+@import '../modules/variables.scss';
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 18px;
+
+  background-color: $background-color;
+
+  @include media(">desktop") {
+    // everything calculated will scale fluidly after medium breakpoint
+    font-size: calc(12px + 0.4vw);
+  }
+}
+
+svg {
+  width: 100%;
+}
+
+body {
+  font-size: to-rem(14px);
+  font-weight: $base-lighter-font-weight;
+
+  text-align: center;
+  line-height: 1.6;
+  color: $primary-color;
+
+  z-index: 2;
+
+  margin: auto;
+
+  @include media('>tablet') {
+    text-align: initial;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.word-break {
+  display: block;
+}
+
+body .container {
+  padding: 0 to-rem(20px);
+  padding-bottom: to-rem(90px);
+
+  @include media('>tablet') { 
+    padding: to-rem(60px) to-rem(160px);
+  }
+}
+
+main {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+}
+
+.section {
+  padding-bottom: to-rem(66px);
+  z-index: 4;
+
+  &:first-of-type {
+    padding-top: to-rem(0px);
+  }
+
+  @include media('>desktop') { 
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    padding-bottom: to-rem(190px);
+  }
+}
+
+.logo {
+  display: block;
+  width: to-rem(90px);
+  margin: auto 0;
+}
+
+.img--hero{
+  position: absolute;
+}
+
+a:focus {
+  outline: 2px solid coral;
+}
+
+.text-content {
+  @include media('>desktop') { 
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.details {
+  color: grey;
+  border-bottom: 1px solid grey;
+  padding: to-rem(20px) 0;
+  
+  &:nth-of-type(1) {
+    border-top: 1px solid grey;
+  }
+}
+
+.summary {
+  color: $black;
+  transition: 0.2s ease-in-out color;
+
+    &:hover {
+      @include media('>desktop') {
+          color: $soft-red;
+      }
+  }
+  
+  // padding-bottom: to-rem(20px);
+}

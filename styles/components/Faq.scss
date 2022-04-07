@@ -1,0 +1,21 @@
+.faq-container {
+    text-align: center;
+    
+    .text-content {
+        @include media('>desktop') { 
+            width: to-rem(470px);
+        }
+    }
+}
+
+.faq-detail-container {
+    @include media('>desktop') { 
+        width: to-rem(500px);
+        margin: auto;
+    }
+}
+
+body .faq-detail-container {
+    text-align: left;
+    padding-top: to-rem(20px); 
+}

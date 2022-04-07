@@ -1,0 +1,10 @@
+.download-container {
+        
+    .text-content {
+        margin-bottom: to-rem(20px);
+
+        @include media('>desktop') { 
+            width: to-rem(470px);
+        }
+    }
+}
