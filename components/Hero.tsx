@@ -5,6 +5,7 @@ import Link  from "next/link"
 import Image from 'next/image';
 
 import heroImage from '../assets/illustration-hero.svg'
+import React from "react";
 
 export default function Hero() {
     const [blockContent, setBlockContent] = useState(null);

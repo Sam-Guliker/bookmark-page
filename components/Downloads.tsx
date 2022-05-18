@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import sanityClient from "../Client";
 import imageUrlBuilder from "@sanity/image-url";
+import React from "react";
 
 const builder = imageUrlBuilder(sanityClient);
 

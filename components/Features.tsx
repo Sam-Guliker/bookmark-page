@@ -1,6 +1,7 @@
 import sanityClient from "../Client";
 import { useEffect, useState } from "react";
 import  FeatureDetails from './FeatureDetails'
+import React from "react";
 
 export default function Features() {
     const [blockContent, setBlockContent] = useState(null);

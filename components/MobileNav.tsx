@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import logo from './../assets/logo-bookmark-white.png'
 import closing from './../assets/icon-close.svg'
+import React from 'react';
 
 type mobileProp = {
     active: boolean,
