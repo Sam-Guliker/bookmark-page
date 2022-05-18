@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+sanitybookmark/node_modules
+sanitybookmark/dist
