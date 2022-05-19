@@ -1,10 +1,10 @@
-import sanityClient from "../Client";
+import {client} from "../Client";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 
 import imageUrlBuilder from "@sanity/image-url";
 
-const builder = imageUrlBuilder(sanityClient);
+const builder = imageUrlBuilder(client);
 
 function urlFor(source) {
 	return builder.image(source);
@@ -15,7 +15,7 @@ export default function FeatureDetails() {
   const [blockContent, setBlockContent] = useState(null);
 
   useEffect(() => {
-      sanityClient
+      client
           .fetch(
               `*[_type == "featureBlock"]{
       title,

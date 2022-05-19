@@ -1,4 +1,4 @@
-import sanityClient from "../Client";
+import {client} from "../Client";
 import { useEffect, useState } from "react";
 
 import Link  from "next/link"
@@ -11,7 +11,7 @@ export default function Hero() {
     const [blockContent, setBlockContent] = useState(null);
 
     useEffect(() => {
-        sanityClient
+        client
             .fetch(
                 `*[_type == "contentBlock" && title == "A Simple Bookmark Manager"]{
         title,

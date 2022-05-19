@@ -1,11 +1,11 @@
-import sanityClient from "../Client";
+import {client} from "../Client";
 import { useEffect, useState } from "react";
 
 export default function FaqDetails() {
   const [blockContent, setBlockContent] = useState(null);
 
   useEffect(() => {
-      sanityClient
+        client
           .fetch(
               `*[_type == "faqBlock"]{
       title,

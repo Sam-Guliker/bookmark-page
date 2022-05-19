@@ -1,4 +1,4 @@
-import sanityClient from "../Client";
+import {client} from "../Client";
 import { useEffect, useState } from "react";
 
 import FaqDetails from "./FaqDetails";
@@ -6,7 +6,7 @@ import FaqDetails from "./FaqDetails";
 export default function Faq() {
     const [blockContent, setBlockContent] = useState(null);
     useEffect(() => {
-        sanityClient
+        client
             .fetch(
                 `*[_type == "contentBlock" && title == "Frequently Asked Questions"]{
         title,
