@@ -1,3 +1,4 @@
+// @ts-ignore
 import {client} from "../Client";
 import { useEffect, useState } from "react";
 import  FeatureDetails from './FeatureDetails'
