@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 
 // @ts-ignore
-import {client} from "../Client";
+import {client} from "../client";
 import imageUrlBuilder from "@sanity/image-url";
 import React from "react";
 
