@@ -1,4 +1,4 @@
-// @ts-ignore
+
 import {client} from "../client";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
