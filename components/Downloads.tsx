@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 
+
+// @ts-ignore
 import {client} from "../Client";
 import imageUrlBuilder from "@sanity/image-url";
 import React from "react";
