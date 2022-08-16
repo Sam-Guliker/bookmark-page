@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from "react";
 
-
-// @ts-ignore
-import {client} from "../client";
 import imageUrlBuilder from "@sanity/image-url";
 import React from "react";
+import { client } from "../client";
 
 const builder = imageUrlBuilder(client);
 

@@ -1,7 +1,7 @@
 
-import {client} from "../client";
-import { useEffect, useState } from "react";
 import Image from 'next/image';
+import { useEffect, useState } from "react";
+import { client } from "../client";
 
 import imageUrlBuilder from "@sanity/image-url";
 
@@ -55,11 +55,9 @@ export default function FeatureDetails() {
               <h2 className="heading-01">{blockContent[id].title}</h2>
               <p className="paragraph-01">{blockContent[id].description}</p>
             </div>
-            {/* <a>{content.button}</a> */}
           </div>
           
       }
-              
       </div>
   );
 }

@@ -95,6 +95,10 @@ a:focus {
   outline: 2px solid coral;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 .text-content {
   @include media('>desktop') { 
     text-align: center;
@@ -103,6 +107,7 @@ a:focus {
 }
 
 .details {
+  cursor: pointer;
   color: grey;
   border-bottom: 1px solid grey;
   padding: to-rem(20px) 0;
